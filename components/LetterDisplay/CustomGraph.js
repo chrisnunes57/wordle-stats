@@ -42,7 +42,7 @@ function CustomGraph({ letterData }) {
 
     return (
         <div className={styles['graph-wrapper']}>
-            <svg viewBox={"0 0 150 " + BAR_HEIGHT}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox={"0 0 150 " + BAR_HEIGHT} width="175" height="80">
                 {bars.map( (data, i) => {
                     return <rect
                         width="20"
