@@ -35,7 +35,8 @@ function CustomGraph({ letterData }) {
     const bars = letterData.positions.map( (val, i) => {
         return {
             height: BAR_HEIGHT * val / maxVal,
-            color: getBarColor(letterData.positions, i)
+            color: getBarColor(letterData.positions, i),
+            count: letterData.positions[i]
         }
     })
 
@@ -43,13 +44,14 @@ function CustomGraph({ letterData }) {
         <div className={styles['graph-wrapper']}>
             <svg viewBox={"0 0 150 " + BAR_HEIGHT}>
                 {bars.map( (data, i) => {
-                    return <rect 
-                            width="20" 
-                            height={data.height} 
-                            x={22 * i}
-                            y={BAR_HEIGHT - data.height}
-                            fill={data.color} 
-                            key={i} >
+                    return <rect
+                        width="20"
+                        height={data.height}
+                        x={22 * i}
+                        y={BAR_HEIGHT - data.height}
+                        fill={data.color}
+                        key={i} >
+                            <title>Spotted {data.count} times</title>
                     </rect>
                 })}
             </svg>
