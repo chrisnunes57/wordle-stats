@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.letter-display-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.letter-wrapper {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 150px;
+    max-width: 250px;
+    min-width: 250px;
+    
+    .big-letter {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-weight: 500;
+        font-size: 7em;
+        padding-right: 20px;
+        line-height: 0.85em;
+    }
+
+}
