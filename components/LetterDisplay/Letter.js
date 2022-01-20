@@ -20,7 +20,7 @@ function Letter({ letterData }) {
 
     return (
         <div className={styles['letter-wrapper']} style={{"color": getTextColor(letterData.percentage)}} >
-            <h1 className={styles['big-letter']}>{letterData ? letterData.letter : ""}</h1>
+            <h1 className={styles['big-letter']} data-percentage={letterData.percentage.toFixed(2) + "%"}>{letterData ? letterData.letter : ""}</h1>
             <CustomGraph letterData={letterData} />
         </div>
     )
